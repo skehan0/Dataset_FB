@@ -1,94 +1,205 @@
-# Matching Datasets:
+# Define the dataset as a list of dictionaries
+dataset = [
+    {
+        "child_name": "Sarah Ahmed",
+        "child_age": 7,
+        "mother_name": "Fatima Ahmed",
+        "father_name": "Amir Ahmed",
+        "siblings": ["Ali Ahmed", "Amina Ahmed"],
+        "locality": "Aleppo, Syria",
+        "pictures": "[Link to pictures]",
+        "video_location": "[Link to video]"
+    },
+    {
+        "child_name": "Amina Mahmoud",
+        "child_age": 6,
+        "mother_name": "Layla Mahmoud",
+        "father_name": "Kareem Mahmoud",
+        "siblings": [],
+        "locality": "Mosul, Iraq",
+        "pictures": "[Link to pictures]",
+        "video_location": "[Link to video]"
+    },
+    {
+        "child_name": "Youssef Alawi",
+        "child_age": 8,
+        "mother_name": "Amira Alawi",
+        "father_name": "Khalid Alawi",
+        "siblings": ["Leila Alawi"],
+        "locality": "Aleppo, Syria",
+        "pictures": "[Link to pictures]",
+        "video_location": "[Link to video]"
+    },
+    {
+        "child_name": "Omar Al-Farsi",
+        "child_age": 7,
+        "mother_name": "Mariam Al-Farsi",
+        "father_name": "Ali Al-Farsi",
+        "siblings": [],
+        "locality": "Raqqa, Syria",
+        "pictures": "[Link to pictures]",
+        "video_location": "[Link to video]"
+    },
+    {
+        "child_name": "Jon Nusa",
+        "child_age": 8,
+        "mother_name": "Susan Nusa",
+        "father_name": "John Nusa",
+        "siblings": [],
+        "locality": "Gaza",
+        "pictures": "[Link to pictures]",
+        "video_location": "[Link to video]"
+    },
+    {
+        "child_name": "Harry Ger",
+        "child_age": 8,
+        "mother_name": "Sofia Ger",
+        "father_name": "Alan Ger",
+        "siblings": [],
+        "locality": "Gaza",
+        "pictures": "[Link to pictures]",
+        "video_location": "[Link to video]"
+    },
+        {
+        "child_name": "Sofianna Sween",
+        "child_age": 8,
+        "mother_name": "Mary Sween",
+        "father_name": "",
+        "siblings": [],
+        "locality": "Gaza",
+        "pictures": "[Link to pictures]",
+        "video_location": "[Link to video]"
+    }
+    # Add more child entries...
+]
 
-Child Information:
-Name: Sarah Ahmed
-Age: 7
-Family:
-  Mother's Name: Fatima Ahmed
-  Father's Name: Amir Ahmed
-  Siblings: Ali Ahmed (age 5), Amina Ahmed (age 10)
-Locality: Aleppo, Syria
-Pictures: [Link to pictures]
-Video Location: [Link to video]
-
-Parent Information:
-Name: Amir Ahmed
-Age: 35
-Locality: Aleppo, Syria
-Last Known Location (of kid): [Coordinates]
-Pictures (of the parent): [Link to pictures]
-Video: [Link to video]
-Child:
-  Name: Sarah Ahmed
-  Age: 7
-  Locality: Aleppo, Syria
-  Pictures: [Link to pictures]
-  Video: [Link to video]
-  Last Seen Location: [Coordinates]
-
-...
-
-# Unmatched Data:
-
-Child Information:
-Name: Amina Mahmoud
-Age: 6
-Family:
-  Mother's Name: Layla Mahmoud
-  Father's Name: Kareem Mahmoud
-  Siblings: None
-Locality: Mosul, Iraq
-Pictures: [Link to pictures]
-Video Location: [Link to video]
-
-Child Information:
-Name: Yusuf Alawi
-Age: 8
-Family:
-  Mother's Name: Amira Alawi
-  Father's Name: Khalid Alawi
-  Siblings: Leila Alawi (age 6)
-Locality: Aleppo, Syria
-Pictures: [Link to pictures]
-Video Location: [Link to video]
-
-Child Information:
-Name: Safa Ahmed
-Age: 7
-Family:
-  Mother's Name: Nour Ahmed
-  Father's Name: Bilal Ahmed
-  Siblings: Omar Ahmed (age 5), Fatima Ahmed (age 10)
-Locality: Homs, Syria
-Pictures: [Link to pictures]
-Video Location: [Link to video]
-
-Parent Information:
-Name: Abdul Rahman Al-Mansoori
-Age: 40
-Locality: Sana'a, Yemen
-Last Known Location (of kid): [Coordinates]
-Pictures (of the parent): [Link to pictures]
-Video: [Link to video]
-Child:
-  Name: Layla Al-Mansoori
-  Age: 9
-  Locality: Sana'a, Yemen
-  Pictures: [Link to pictures]
-  Video: [Link to video]
-  Last Seen Location: [Coordinates]
-
-Parent Information:
-Name: Sara Abbas
-Age: 35
-Locality: Raqqa, Syria
-Last Known Location (of kid): [Coordinates]
-Pictures (of the parent): [Link to pictures]
-Video: [Link to video]
-Child:
-  Name: Ahmed Abbas
-  Age: 7
-  Locality: Raqqa, Syria
-  Pictures: [Link to pictures]
-  Video: [Link to video]
-  Last Seen Location: [Coordinates]
+# Add parent data corresponding to the added child data
+dataset += [
+    {
+        "mother_name": "Nadia Ahmed",
+        "father_name": "Kareem Ahmed",
+        "last_known_location": "Aleppo, Syria",
+        "contact_info": "nadia@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Sarah Ahmed",
+        "child_age": 7,
+        "locality": "Aleppo, Syria",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    {
+        "mother_name": "Layla Mahmoud",
+        "father_name": "Kareem Mahmoud",
+        "last_known_location": "Mosul, Iraq",
+        "contact_info": "layla@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Amina Mahmoud",
+        "child_age": 6,
+        "locality": "Mosul, Iraq",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    {
+        "mother_name": "Amira Alawi",
+        "father_name": "Khalid Alawi",
+        "last_known_location": "Aleppo, Syria",
+        "contact_info": "amira@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Youssef Alawi",
+        "child_age": 8,
+        "locality": "Aleppo, Syria",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    {
+        "mother_name": "Mariam Al-Farsi",
+        "father_name": "Ali Al-Farsi",
+        "last_known_location": "Raqqa, Syria",
+        "contact_info": "mariam@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Omar Al-Farsi",
+        "child_age": 7,
+        "locality": "Raqqa, Syria",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    {
+        "mother_name": "Fatima Nusa",
+        "father_name": "Ahmed Nusa",
+        "last_known_location": "Baghdad, Iraq",
+        "contact_info": "fatima@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Jon Nusa",
+        "child_age": 8,
+        "locality": "Baghdad, Iraq",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    # Add more parent entries corresponding to the added child data...
+    {
+        "mother_name": "Hala Al-Mansoori",
+        "father_name": "Ahmed Al-Mansoori",
+        "last_known_location": "Sana'a, Yemen",
+        "contact_info": "hala@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Ema Al-Mansoori",
+        "child_age": 2,
+        "locality": "Gaza",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    {
+        "mother_name": "Nadia Alawi",
+        "father_name": "Hassan Alawi",
+        "last_known_location": "Aleppo, Syria",
+        "contact_info": "nadia@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Nathan Alwai",
+        "child_age": 12,
+        "locality": "Gaza",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    {
+        "mother_name": "Sara Abbas",
+        "father_name": "Khalid Abbas",
+        "last_known_location": "Raqqa, Syria",
+        "contact_info": "sara@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Megan Abbas",
+        "child_age": 6,
+        "locality": "Gaza",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+    {
+        "mother_name": "Fatima Al-Farsi",
+        "father_name": "Hassan Al-Farsi",
+        "last_known_location": "Raqqa, Syria",
+        "contact_info": "fatima@example.com",
+        "pictures": "[Link to pictures]",
+        "video": "[Link to video]",
+        "child_name": "Joseph Al-Farsi",
+        "child_age": 8,
+        "locality": "Gaza",
+        "child_pictures": "[Link to pictures]",
+        "child_video": "[Link to video]",
+        "last_seen_location": "[Coordinates]"
+    },
+]
